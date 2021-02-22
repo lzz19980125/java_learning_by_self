@@ -25,7 +25,9 @@
 
 整形（略）
 
-<img src="C:\Users\lizi2\Desktop\python_reptile_practice\java_practice\java markdown笔记\2021-02-20_105457.PNG" alt="java数据类型" style="zoom:60%;" />
+<img src="https://github.com/lzz19980125/java_learning_by_self/blob/main/java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E7%A1%80/figures/2021-02-20_105457.PNG?raw=true" alt="数据类型" style="zoom:67%;" />
+
+
 
 常量：
 
@@ -48,13 +50,13 @@ x++;
 y--;
 ```
 
-<img src="C:\Users\lizi2\Desktop\python_reptile_practice\java_practice\java markdown笔记\2021-02-20_110626.PNG" alt="其他运算" style="zoom:60%;" />
+<img src="https://github.com/lzz19980125/java_learning_by_self/blob/main/java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E7%A1%80/figures/2021-02-20_110626.PNG?raw=true" alt="运算" style="zoom:67%;" />
 
 **布尔运算：**
 
 布尔运算符包括：
 
-<img src="C:\Users\lizi2\Desktop\python_reptile_practice\java_practice\java markdown笔记\2021-02-21_192629.PNG" alt="布尔运算符" style="zoom:67%;" />
+<img src="https://github.com/lzz19980125/java_learning_by_self/blob/main/java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E7%A1%80/figures/2021-02-21_192629.PNG?raw=true" alt="布尔运算" style="zoom:67%;" />
 
 **短路运算**（两个条件相与，则前一个假，后一个不判断，整个都假；两个条件相或反之一样）
 
@@ -86,7 +88,7 @@ public class Hello {
 
 常见转义字符：
 
-<img src="C:\Users\lizi2\Desktop\python_reptile_practice\java_practice\java markdown笔记\未命名图片.png" alt="转义字符" style="zoom:67%;" />
+<img src="https://github.com/lzz19980125/java_learning_by_self/blob/main/java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E7%A1%80/figures/%E6%9C%AA%E5%91%BD%E5%90%8D%E5%9B%BE%E7%89%87.png?raw=true" alt="常见转义字符" style="zoom:67%;" />
 
 字符串拼接：
 
@@ -136,7 +138,7 @@ public class Hello {
 
 **一维数组的定义方式**
 
-<img src="C:\Users\lizi2\Desktop\python_reptile_practice\java_practice\java markdown笔记\未命名图片123.png" alt="数组" style="zoom:67%;" />
+<img src="https://github.com/lzz19980125/java_learning_by_self/blob/main/java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E7%A1%80/figures/%E6%9C%AA%E5%91%BD%E5%90%8D%E5%9B%BE%E7%89%87123.png?raw=true" alt="一维数组的定义方式" style="zoom:67%;" />
 
 定义整数以及字符串数组的几种方式：
 
@@ -286,7 +288,7 @@ public class Hello {
 
 java的输出比较复杂：
 
-<img src="C:\Users\lizi2\Desktop\python_reptile_practice\java_practice\java markdown笔记\未命名图片456.png" alt="IO流" style="zoom: 67%;" />
+<img src="https://github.com/lzz19980125/java_learning_by_self/blob/main/java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E7%A1%80/figures/%E6%9C%AA%E5%91%BD%E5%90%8D%E5%9B%BE%E7%89%87456.png?raw=true" alt="java输出" style="zoom:67%;" />
 
 ```java
 import java.util.Scanner;
@@ -305,7 +307,7 @@ public class Hello {
 
 #### 命令行参数
 
-<img src="C:\Users\lizi2\Desktop\python_reptile_practice\java_practice\java markdown笔记\2021-02-22_125433.PNG" alt="命令行参数" style="zoom: 67%;" />
+<img src="https://github.com/lzz19980125/java_learning_by_self/blob/main/java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E7%A1%80/figures/2021-02-22_125433.PNG?raw=true" alt="命令行参数" style="zoom:67%;" />
 
 ```java
 public class Hello {
@@ -321,7 +323,7 @@ public class Hello {
 
 程序在terminal操纵运行结果为：
 
-<img src="C:\Users\lizi2\Desktop\python_reptile_practice\java_practice\java markdown笔记\未命名图片344.png" alt="terminal" style="zoom:67%;" />
+<img src="https://github.com/lzz19980125/java_learning_by_self/blob/main/java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E7%A1%80/figures/%E6%9C%AA%E5%91%BD%E5%90%8D%E5%9B%BE%E7%89%87344.png?raw=true" alt="terminal" style="zoom:67%;" />
 
 #### 流程控制
 
