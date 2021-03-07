@@ -27,7 +27,8 @@ public class Hello {
         Person person1= new Person();
         person1.setName("小蜜蜂");
         person1.setBorn_year(1972);
-        System.out.printf("person1的个人信息：姓名：%s，出生年月：%d，年龄：%d",person1.getName(),person1.getBorn_year(),person1.getAge());
+        System.out.printf("person1的个人信息：姓名：%s，出生年月：%d，年龄：%d",
+                person1.getName(),person1.getBorn_year(),person1.getAge());
     }
     static class Person{
         private String name;
