@@ -757,3 +757,99 @@ class Person{
 
 实际上，因为`interface`的字段只能是`public static final`类型，所以我们可以把这些修饰符都去掉，编译器会自动把该字段变为`public static final`类型。
 
+#### 包
+
+在现实中，如果小明写了一个`Person`类，小红也写了一个`Person`类，现在，小白既想用小明的`Person`，也想用小红的`Person`，怎么办？
+
+在Java中，使用`package`来解决名字冲突。
+
+Java定义了一种名字空间，称之为包：`package`。一个类总是属于某个包，类名（比如`Person`）只是一个简写，真正的完整类名是`包名.类名`。
+
+**注意：如果不在一个包的类想互相引用，必须保证类都是`public`的！！**
+
+**但一个java文件中只能存在一个`public`的类，所有`public`类必须被定义在其对应的与类名同名的java文件里！！**
+
+需要按照包结构把Java文件组织起来。假设以`package_sample`作为根目录，`src`作为源码目录，那么所有文件结构就是：
+
+```ascii
+package_sample
+└─ src
+    ├─ com.company
+    │  └─ Hello.java
+    │  └─ Person.java
+    └─ goodbay
+       └─ good.java
+```
+
+##### 包作用域与`import`
+
+位于同一个包的类，可以访问包作用域的字段和方法。不用`public`、`protected`、`private`修饰的字段和方法就是包作用域。
+
+在一个`class`中，我们总会引用其他的`class`，推荐以下的写法：
+
+`Hello.java`：
+
+```java
+package com.company;
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Hello {
+    public static void main(String[] args) {
+        Person person1 = new Person();
+        Person.setNumber(Person.getNumber()+1);
+        System.out.printf("此时number的值为：%d\n",Person.getNumber());
+        Person person2 = new Person();
+        Person.setNumber(Person.getNumber()+1);
+        System.out.printf("此时number的值为：%d\n",Person.getNumber());
+    }
+}
+```
+
+`Person.java`：
+
+```java
+package com.company;
+
+public class Person{
+    protected static int number=0;
+    public Person(){}
+    public static int getNumber(){
+        return number;
+    }
+    public static void setNumber(int number1){
+        number = number1;
+    }
+}
+```
+
+`good.java`：
+
+```java
+package goodbay;
+import com.company.Person; //import com.company.*; 代表引入com.company包中的所有类
+
+public class good {
+    public static void main(String[] args) {
+        Person person1 = new Person();
+        Person.setNumber(Person.getNumber()+1);
+        System.out.printf("此时number的值为：%d\n",Person.getNumber());
+        Person person2 = new Person();
+        Person.setNumber(Person.getNumber()+1);
+        System.out.printf("此时number的值为：%d\n",Person.getNumber());
+    }
+}
+```
+
+在编写class的时候，编译器会自动帮我们做两个import动作：
+
+- 默认自动`import`当前`package`的其他`class`；
+- 默认自动`import java.lang.*`。
+
+为了避免名字冲突，我们需要确定唯一的包名。推荐的做法是使用倒置的域名来确保唯一性。例如：
+
+- org.apache
+- org.apache.commons.log
+
+
+
