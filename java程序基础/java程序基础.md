@@ -1,5 +1,15 @@
 # java程序基础
 
+#### 常用java术语
+
+|          术语名          | 缩写 |                   解释                    |
+| :----------------------: | :--: | :---------------------------------------: |
+|   java development kit   | JDK  |      编写java程序的程序员使用的软件       |
+| java runtime environment | JRE  |       运行java程序的用户使用的软件        |
+|     standard edition     |  SE  |   用于桌面或简单的服务器应用的java平台    |
+|    enterprise edition    |  EE  |      用于复杂的服务器应用的java平台       |
+| software development kit | SDK  | 一个过时术语，用于描述1998年至2006年的JDK |
+
 #### 典型java程序结构
 
 1. 一个典型的java程序结构为：
@@ -12,13 +22,21 @@
    }
    ```
 
-2. 一个程序的基本单位为类，即`class `。类名的定义要求：***习惯以大写字母开头***。
+2. **注意：以上这段代码所对应的文件名必须定义为：`Hello.java`    即：java文件的文件名必须与文件中所包含的`public`类名相同！**
+
+3. 一个程序的基本单位为类，即`class `。类名的定义要求：***习惯以大写字母开头***。
 
    `public` 为访问修饰符，表示`class` 是公开的，不写`public` ，也可以正确编译，但此类将无法从命令行执行。
 
-   `class` 内部可以定义诸多method ，这里的method为`main` ，返回值为`void` ,表示没有任何返回值。
+   `class` 内部可以定义诸多method ，这里的method为`main` ，**`main`方法必须声明为`public`，且必须是`static`的**，返回值为`void` ,表示没有任何返回值。
 
    method的命名与class类似，只不过通常用小写开头。`static` 为静态方法修饰符，此方法括号内的参数必须为`String[]` ,即字符串数组
+
+#### 注释
+
+1. 最常用的方法是使用`//`，其注释内容从`//`开始到本行结尾。
+2. 当需要长篇的注释时，既可以在每行的注释前面标记`//`，也可以使用`/*`和`*/`将一段比较长的注释括起来。
+3. 第三种注释可以用来自动的生成文档。这种注释以`/**`开始，以`*/`结束。
 
 
 #### java数据类型
@@ -89,6 +107,12 @@ public class Hello {
 常见转义字符：
 
 <img src="https://github.com/lzz19980125/java_learning_by_self/blob/main/java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E7%A1%80/figures/%E6%9C%AA%E5%91%BD%E5%90%8D%E5%9B%BE%E7%89%87.png?raw=true" alt="常见转义字符" style="zoom:67%;" />
+
+通常用方法`equals`检测字符串是否相等，一定不能够使用`==`检测两个字符串是否相等！
+
+```java
+s.equals(t)
+```
 
 字符串拼接：
 
@@ -280,6 +304,12 @@ public class Hello {
     }
 }
 ```
+
+例子：涉及到二维数组的逐行打印，以及二维数组的行和列如何索引：
+
+
+
+
 
 #### IO流
 
