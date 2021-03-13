@@ -305,9 +305,70 @@ public class Hello {
 }
 ```
 
-例子：涉及到二维数组的逐行打印，以及二维数组的行和列如何索引：
+例子：涉及到二维数组的**逐行打印**，以及二维数组的**行和列如何索引**：
 
+![利息计算](https://github.com/lzz19980125/java_learning_by_self/blob/main/java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E7%A1%80/figures/2021-03-13_094026.PNG)
 
+```java
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class interest{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        System.out.println("Please input the year you want to caculate:");
+        final int YEAR= s.nextInt();
+        final int COLUMN = 6;
+        double [][] interest = new double [YEAR][COLUMN];
+        double [] balance = new double [COLUMN];
+
+        //将interest矩阵首行赋值为10000；
+        for (int i=0;i<interest[0].length;i++){
+            interest[0][i] = 10000.0;
+        }
+
+        //初始化balance矩阵
+        for (int i =0;i<balance.length;i++){
+            balance[i] = 0.1+i/100.0;
+        }
+
+        //计算最终的interest矩阵
+        for (int i = 1;i<interest.length;i++){
+            for (int j =0;j<interest[0].length;j++){
+                interest[i][j] = interest[i-1][j]*balance[j]+interest[i-1][j];
+            }
+        }
+
+        //打印最终结果
+        for (double [] i :interest){
+             System.out.println(Arrays.toString(i));
+        }
+    }
+}
+```
+
+二维不规则数组的定义：
+
+```java
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class buguize_arrays {
+    public static void main(String [] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What size do you want to print?");
+        final int SIZE = scanner.nextInt();
+
+        int [][] arr = new int [SIZE][];
+        for (int i=0;i<arr.length;i++){
+            arr[i] = new int [i+1];
+        }
+        for (int [] i:arr){
+            System.out.println(Arrays.toString(i));
+        }
+    }
+}
+```
 
 
 
